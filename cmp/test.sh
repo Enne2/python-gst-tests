@@ -1,0 +1,1 @@
+gst-launch-1.0 videotestsrc name=videotestsrc is-live=true pattern=black do-timestamp=true ! identity name=identity_v ! video/x-raw,width=640,height=480,framerate=25/1 ! queue max-size-buffers=1 max-size-time=0 max-size-bytes=0 silent=1 leaky=2 ! autovideosink name=videosink
